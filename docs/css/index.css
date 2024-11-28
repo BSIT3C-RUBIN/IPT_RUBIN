@@ -1,0 +1,423 @@
+/* Color Palette */
+:root {
+    --main-color: #7f3bb6;
+    --lighter-color: #e2bfff;
+    --white-text: #ede2f5;
+    --yellow-emphasis: #ffeab4;
+    --black-text: #1e1a21;
+    --dark-background: #2a123d;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    position: fixed; /* Keeps the header at the top */
+    width: 100%; /* Ensures full width */
+    top: 0; /* Starts at the top */
+    z-index: 99; /* Ensure it's above other content */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; /* Smooth sliding and fading */
+    transform: translateY(-100%); /* Initially above the viewport */
+    opacity: 0; /* Initially hidden */
+    visibility: hidden; /* Initially hidden */
+}
+
+#header.visible {
+    transform: translateY(0); /* Slide into view */
+    opacity: 1; /* Fully visible */
+    visibility: visible; /* Set to visible */
+    
+}
+
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.title {
+    font-size: 1.5em;
+}
+
+/* Banner Section */
+.banner {
+    height: 100vh;
+    width: 100%;
+    background-color: var(--main-color);
+    color: var(--white-text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-btn {
+    color: #ede2f5;
+    border-radius: 30px;
+    border: 1px solid #ede2f5;
+    transition: all 0.2s ease-in-out; 
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 10px;
+}
+
+.banner-btn:hover {
+    color: var(--black-text);
+    transform: scale(1.1);
+    background-color: #ede2f5;
+}
+
+.navbar{
+    background-color: #7f3bb6; 
+    box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.050);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    letter-spacing: 5px;
+    color: #ede2f5;
+    transition: all 0.3s ease-in-out; 
+    margin: 10px;
+    margin-right: 20px;
+}
+
+.navbar-brand:hover {
+    color: var(--white-text);
+    transform: scale(1.1);
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.300);
+}
+
+.navbar-cta {
+    border: 1px solid #ede2f5;
+    border-radius: 30px;
+    font-weight: bold;
+    color: #e2bfff;
+}
+
+.navbar-cta:hover {
+    color: var(--white-text);
+    transform: scale(1.1);
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.300);
+    background-color: #2a123d;
+    border: none;
+}
+
+.nav-link {
+    transition: all 0.2s ease-in-out; 
+    margin: 5px;
+    margin-left: 20px;
+}
+
+.nav-link:hover {
+    color: var(--white-text);
+    transform: scale(1.1);
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.300);
+}
+
+/* Text Alignment */
+.align-left {
+    text-align: left;
+}
+
+.cta {
+    background-color: rgba(42, 18, 61, 0.5); /* Dark with 50% opacity */
+    width: 100%;
+    padding-top: 0px;
+    padding-bottom: 10px;
+}
+
+
+/* Projects Section */
+.projects {
+    background-color: #f9f9f9;
+}
+
+.projects .card,
+.about {
+    background-color: var(--white-text);
+    border: 1px solid #ddd;
+}
+
+/* Contact Button Styles */
+.contact-button {
+    color: #ede2f5;
+    border-radius: 30px;
+    border: 1px solid #ede2f5;
+    transition: all 0.2s ease-in-out; 
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 10px;
+}
+
+.contact-button:hover {
+    color: var(--black-text);
+    transform: scale(1.1);
+    background-color: #ede2f5;
+}
+
+.see-more {
+    background-color: var(--main-color);
+    color: var(--white-text);
+    border-radius: 30px;
+    box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.050);
+    transition: all 0.2s ease-in-out; 
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.see-more:hover {
+    color: var(--white-text);
+    transform: scale(1.1);
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.300);
+    background-color: #2a123d;
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--main-color);
+    color: var(--white-text);
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.300);
+}
+
+footer a {
+    color: #ffeab4;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Main Heading Styles */
+.main {
+    font-weight: bold;
+    letter-spacing: 5px;
+    margin: 10px;
+    font-size: 40px;
+}
+
+.main .text1 {
+    letter-spacing: 20px;
+    font-size: 100px;
+}
+
+/* Typing Animation */
+.typing {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 0.15em solid var(--yellow-emphasis);
+    animation: typing 3.5s steps(30, end), blink-caret 0.75s step-end infinite;
+    width: 8ch; /* Adjust based on the number of characters */
+}
+
+.genhead {
+    color: #2a123d; /* Dark color for the heading */
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 40px; /* Spacing under the heading */
+}
+
+.genhead_h3 {
+    color: #2a123d; /* Dark color for the heading */
+    font-weight: bold;
+    margin-bottom: 40px; /* Spacing under the heading */
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: var(--yellow-emphasis); }
+}
+
+
+
+.quotes {
+    background-color: #ede2f5;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.skill {
+    position: relative;
+    background-color: #7f3bb6;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.2em;
+    color: white;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+    margin-top: 10px;
+    box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.100);
+    transition: all 0.2s ease-in-out; 
+    cursor: pointer;
+}
+
+.skill:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+
+
+/*Project Style*/
+
+.table {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    border-collapse: collapse;
+}
+
+.table-bordered td {
+    border: 2px solid #ddd; /* Add border around table cells */
+    padding: 30px;
+}
+
+.project-image {
+    
+    padding: 5px;
+    width: 100%; /* Ensures image fills the table cell */
+    max-width: 500px;
+    max-height: 500px;
+    object-fit: cover;
+    transition: all 0.2s ease-in-out; 
+}
+
+.project-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.050);
+}
+
+.project-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.project-description {
+    font-size: 1rem;
+    color: #555;
+    text-align: justify;
+}
+
+.align-middle {
+    vertical-align: middle; /* Ensures content aligns in the middle of the cell */
+    max-width: 100px;
+}
+
+.link-container {
+    text-align: center;
+    margin-top: 10px;
+    transition: all 0.2s ease-in-out; 
+}
+
+.link-container a {
+    font-size: 1rem;
+    color:  #7f3bb6;
+    text-decoration: none;
+    font-weight: bold;    
+}
+
+.link-container:hover {
+    color: var(--main-color);
+    transform: scale(1.1);
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.300);
+}
+
+
+
+/*About Me*/
+.about {
+    background-color: #f9f9f9; /* Light background for a clean look */
+    padding: 60px 0; /* Add more space above and below */
+}
+
+.about h2 {
+    color: #2a123d; /* Dark color for the heading */
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 40px; /* Spacing under the heading */
+}
+
+.about-description {
+    font-size: 1.2rem;
+    line-height: 1.8; /* Improves readability */
+    color: #555; /* Slightly darker text for contrast */
+    margin-bottom: 20px;
+}
+
+
+
+
+.myPhoto img {
+    width: 350px; /* Adjust image size */
+    height: 350px; /* Ensures circular shape */
+    object-fit: cover; /* Crops the image if necessary */
+    border: 5px solid #2a123d; /* Adds a colored border around the image */
+    border-radius: 50%; /* Perfect circle */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+@media (max-width: 768px) {
+    .about-description {
+        font-size: 1rem; /* Adjust text size for smaller screens */
+    }
+
+    .myPhoto img {
+        width: 200px;
+        height: 200px; /* Smaller image for mobile */
+    }
+}
+
+
+/*Fav Icons*/
+.fa {
+    color: white;
+}
+
+.fa:hover {
+    color: #ffeab4;
+}
+
+.light {
+    color: #1e1a21;
+}
+
+.light:hover {
+    color: #7f3bb6;
+}
+
+
+
+
+/*Modal for Zooming in Image*/
+.modal-content {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.modal-image {
+    max-width: 100%;
+    max-height: 95vh;
+    object-fit: contain;
+}
+
+
